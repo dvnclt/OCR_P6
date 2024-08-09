@@ -1,0 +1,45 @@
+/* Marge globale pour le body */
+body {
+    margin: 50px 50px; /* Ajoute une marge de 50px autour du contenu du body */
+}
+
+/* Style pour le header */
+header {
+    width: 837px;
+    height: 122px;
+    
+    background: #61787F;
+    border: 1px solid #000000;
+    
+    font-family: 'Oswald';
+    font-style: normal;
+    font-size: 40px;
+    display: flex; /* Utilise Flexbox pour le positionnement des éléments enfants */
+    align-items: center; /* Centre verticalement les éléments enfants à l'intérieur de l'en-tête */
+    
+    color: #FFFFFF;
+}
+
+/* Styles pour le logo */
+/* Faire en sorte que seul le logo soit concerné */
+img {
+    margin: 20px; /* Ajoute une marge de 20px autour de chaque image */
+    
+    width: 127px;
+    height: 94px;
+}
+
+/* Styles pour les éléments <h1> */
+h1 {
+    width: 514px;
+    height: 51px;
+    
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    display: flex; /* Utilise Flexbox pour le positionnement du texte à l'intérieur de <h1> */
+    align-items: center; /* Centre verticalement le texte à l'intérieur de <h1> */
+    
+    color: #FFFFFF; /* Définit la couleur du texte à blanc */
+}
