@@ -1,45 +1,166 @@
-/* Marge globale pour le body */
-body {
-    margin: 50px 50px; /* Ajoute une marge de 50px autour du contenu du body */
+
+
+* {
+    margin: 0px;
 }
 
-/* Style pour le header */
+body {
+    margin: 6vh 7vw;
+    height: 100vh;
+}
+
 header {
-    width: 837px;
-    height: 122px;
+    height: 20%;
     
-    background: #61787F;
+    background-color: #61787F;
     border: 1px solid #000000;
     
-    font-family: 'Oswald';
-    font-style: normal;
-    font-size: 40px;
-    display: flex; /* Utilise Flexbox pour le positionnement des éléments enfants */
-    align-items: center; /* Centre verticalement les éléments enfants à l'intérieur de l'en-tête */
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+header img {
+    margin: auto 2%;    
+    height: 80%;
+}
+
+h1 {
+    margin: auto 4%;
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 4em;
     
     color: #FFFFFF;
 }
 
-/* Styles pour le logo */
-/* Faire en sorte que seul le logo soit concerné */
-img {
-    margin: 20px; /* Ajoute une marge de 20px autour de chaque image */
-    
-    width: 127px;
-    height: 94px;
+h2 {
+    margin: 3% auto;
+
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 4em;
+
+    color: #000000;
 }
 
-/* Styles pour les éléments <h1> */
-h1 {
-    width: 514px;
-    height: 51px;
-    
+.best_movie {
+    height: auto;
+    border: 6px solid #000000;
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+    overflow: hidden; 
+}
+
+.best_movie img{
+    padding: 3% 5%;
+    height: auto;
+    width: 100%;
+}
+
+.informations {
+    padding-left: 8%;
+}
+
+.best_movie .movie_title {
     font-family: 'Oswald';
-    font-style: normal;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.best_movie .description {
+    padding: 3% 3% 7% 0;
+    font-family: 'Oswald';
+    font-size: 2em;
     font-weight: 200;
-    font-size: 40px;
-    display: flex; /* Utilise Flexbox pour le positionnement du texte à l'intérieur de <h1> */
-    align-items: center; /* Centre verticalement le texte à l'intérieur de <h1> */
+}
+
+.btn_details {
+    margin: 5% 5% 5% 75%;
+
+    height: 68px;
+    width: 166px;
     
-    color: #FFFFFF; /* Définit la couleur du texte à blanc */
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #FA0B0B;
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 13%;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    overflow: hidden;
+}
+
+.movie {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.movie:hover .overlay {
+    opacity: 1;
+}
+
+.container .movie_title {
+    margin: 10% 0 0 7%;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+}
+
+.overlay_btn_details {
+    margin: 5% 0 5% 65%;
+    padding: 1% 10%;
+
+    border: none;
+    border-radius: 9999px;
+
+    background-color: #2D2C2C;
+
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
 }
