@@ -12,6 +12,7 @@
     <title>JustStreamIt</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -24,212 +25,34 @@
         <section>
             <h2>Meilleur film</h2>
             <div class="best_movie">
-                <img src="assets/images/The_Big_Lebowski.png" alt="The_Big_Lebowski.png">
+                <img class="best_movie_img" src="" alt="Best Movie">
                 <div class="informations">
-                    <h3 class="movie_title">The Big Lebowski</h3>
-                    <p class="description">
-                        Jeff "The Dude" Lebowski, mistaken for a millionaire of the 
-                        same name, seeks restitution for his ruined rug and enlists 
-                        his bowling buddies to help get it.
-                    </p>
+                    <h3 class="movie_title"></h3>
+                    <p class="description"></p>
                     <button class="btn_details">Détails</button>
                 </div>
-                    
             </div>
         </section>
         <section>
             <h2>Films les mieux notés</h2>
-            <div class="container">
-                <div class="movie">
-                    <img src="assets/images/titanic.png" alt="titanic.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Titanic</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/back_to_the_future.png" alt="back_to_the_future.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Retour vers le future</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/scarface.png" alt="scarface.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Scarface</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/pulp_fiction.png" alt="pulp_fiction.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Pulp Fiction</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/the_godfather.jpeg" alt="the_godfather.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Le Parrain</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/alien.png" alt="alien.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Alien</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>            
-            </div>
+            <div class="top_movies_container"></div>
         </section>
         <section>
-            <section>
-                <h2>Catégorie 1</h2>
-                <div class="container">
-                    <div class="movie">
-                        <img src="assets/images/titanic.png" alt="titanic.png">
-                        <div class="overlay">
-                            <h3 class="movie_title">Titanic</h3>
-                            <button class="overlay_btn_details">Détails</button>
-                        </div>
-                    </div>
-                    <div class="movie">
-                        <img src="assets/images/back_to_the_future.png" alt="back_to_the_future.png">
-                        <div class="overlay">
-                            <h3 class="movie_title">Retour vers le future</h3>
-                            <button class="overlay_btn_details">Détails</button>
-                        </div>
-                    </div>
-                    <div class="movie">
-                        <img src="assets/images/scarface.png" alt="scarface.png">
-                        <div class="overlay">
-                            <h3 class="movie_title">Scarface</h3>
-                            <button class="overlay_btn_details">Détails</button>
-                        </div>
-                    </div>
-                    <div class="movie">
-                        <img src="assets/images/pulp_fiction.png" alt="pulp_fiction.png">
-                        <div class="overlay">
-                            <h3 class="movie_title">Pulp Fiction</h3>
-                            <button class="overlay_btn_details">Détails</button>
-                        </div>
-                    </div>
-                    <div class="movie">
-                        <img src="assets/images/the_godfather.jpeg" alt="the_godfather.png">
-                        <div class="overlay">
-                            <h3 class="movie_title">Le Parrain</h3>
-                            <button class="overlay_btn_details">Détails</button>
-                        </div>
-                    </div>
-                    <div class="movie">
-                        <img src="assets/images/alien.png" alt="alien.png">
-                        <div class="overlay">
-                            <h3 class="movie_title">Alien</h3>
-                            <button class="overlay_btn_details">Détails</button>
-                        </div>
-                    </div>            
-                </div>
-            </section>
+            <h2>Action</h2>
+            <div class="top_action_movies_container"></div>
         </section>
         <section>
-            <h2>Catégorie 2</h2>
-            <div class="container">
-                <div class="movie">
-                    <img src="assets/images/titanic.png" alt="titanic.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Titanic</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/back_to_the_future.png" alt="back_to_the_future.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Retour vers le future</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/scarface.png" alt="scarface.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Scarface</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/pulp_fiction.png" alt="pulp_fiction.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Pulp Fiction</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/the_godfather.jpeg" alt="the_godfather.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Le Parrain</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/alien.png" alt="alien.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Alien</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>            
-            </div>
+            <h2>Biography</h2>
+            <div class="top_biography_movies_container"></div>
         </section>
         <section>
-            <h2>Catégorie libre</h2>
-            <div class="container">
-                <div class="movie">
-                    <img src="assets/images/titanic.png" alt="titanic.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Titanic</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/back_to_the_future.png" alt="back_to_the_future.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Retour vers le future</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/scarface.png" alt="scarface.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Scarface</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/pulp_fiction.png" alt="pulp_fiction.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Pulp Fiction</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/the_godfather.jpeg" alt="the_godfather.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Le Parrain</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img src="assets/images/alien.png" alt="alien.png">
-                    <div class="overlay">
-                        <h3 class="movie_title">Alien</h3>
-                        <button class="overlay_btn_details">Détails</button>
-                    </div>
-                </div>            
+            <h2>Catégorie : </h2>
+            <div class="top_genre_movies_container">
+                <select id="categories" name="categories"></select>
             </div>
         </section>
     </main>
     <footer>
-        <p>Texte footer</p>
     </footer>
 </body>
 </html>
