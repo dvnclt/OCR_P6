@@ -11,7 +11,8 @@
 
     <title>JustStreamIt</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script type="module" src="js/main.js" defer></script>
 </head>
 
@@ -39,20 +40,28 @@
         </section>
         <section>
             <h2>Action</h2>
-            <div class="top_action_movies_container"></div>
+            <div class="top_cat1_movies_container"></div>
         </section>
         <section>
             <h2>Biography</h2>
-            <div class="top_biography_movies_container"></div>
+            <div class="top_cat2_movies_container"></div>
         </section>
         <section>
             <h2>Catégorie : </h2>
-            <div class="top_genre_movies_container">
-                <select id="categories" name="categories"></select>
-            </div>
+            <div><select id="categories" name="categories"></select></div>
+            <div class="top_genre_movies_container"></div>
         </section>
     </main>
     <footer>
     </footer>
+        <!-- HTML pour la fenêtre modale -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <!-- Tu peux ajouter ici plus de détails sur le film -->
+        </div>
+    </div>
 </body>
 </html>

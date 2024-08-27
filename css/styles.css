@@ -102,7 +102,7 @@ h2 {
     cursor: pointer;
 }
 
-.top_movies_container, .top_action_movies_container, .top_biography_movies_container, .top_genre_movies_container {
+.top_movies_container, .top_cat1_movies_container, .top_cat2_movies_container, .top_genre_movies_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
