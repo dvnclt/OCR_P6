@@ -1,5 +1,6 @@
 import { fetchAPI, fetchTopMovies } from "./api.js"
 import { initModal } from "./modal.js";
+import { getValidImageUrl } from "./utils.js";
 
 
 // Fonction pour obtenir le meilleur film
@@ -12,11 +13,11 @@ export async function getBestMovie(url) {
 
     // Met à jour les éléments HTML avec les détails du meilleur film
     document.querySelector(".best_movie img").src = bestMovie.image_url;
-    document.querySelector(".best_movie .movie_title").textContent = bestMovie.original_title;
-    document.querySelector(".best_movie .description").textContent = bestMovie.description;
+    document.querySelector(".best_movie .best_movie_title").textContent = bestMovie.original_title;
+    document.querySelector(".best_movie .best_movie_description").textContent = bestMovie.description;
 
     // Sélection le bouton détail pour la fenêtre modale
-    document.querySelector('.btn_details').addEventListener('click', function() {
+    document.querySelector('.best_movie_btn').addEventListener('click', function() {
     initModal(bestMovie)
     });
 }
@@ -32,12 +33,22 @@ export async function getTopMovies(url, cssContainer) {
     const container = document.querySelector(cssContainer);
     container.innerHTML = '';
 
-    topMovies.forEach(movie => {
+    // Pour chaque film, crée un élément et vérifie l'image
+    for (const movie of topMovies) {
         const movieElement = document.createElement('div');
         movieElement.classList.add('movie');
 
-        movieElement.innerHTML = `
-            <img src="${movie.image_url}" alt="${movie.title}">
+        // Utilise la nouvelle fonction pour obtenir l'URL de l'image valide
+        const validImageUrl = await getValidImageUrl(movie.image_url, movie.id);
+
+        // Crée l'élément image avec l'URL valide
+        const imgElement = document.createElement('img');
+        imgElement.src = validImageUrl;
+        imgElement.alt = movie.title;
+
+        // Ajoute l'image et d'autres informations sur le film dans l'élément
+        movieElement.appendChild(imgElement);
+        movieElement.innerHTML += `
             <div class="overlay">
                 <h3 class="movie_title">${movie.title}</h3>
                 <button class="overlay_btn_details" data-url="${movie.url}">Détails</button>
@@ -45,7 +56,7 @@ export async function getTopMovies(url, cssContainer) {
         `;
 
         container.appendChild(movieElement);
-    });
+    }
 
     // Ajoute un événement pour chaque bouton Détails
     document.querySelectorAll('.overlay_btn_details').forEach(button => {
@@ -72,7 +83,7 @@ export async function getTopGenreMovies(baseUrl, genreName) {
         const url = `${baseUrl}${encodedGenreName}&page=1&sort_by=-imdb_score`;
         
         // Appelle getTopMovies et attend les données
-        await getTopMovies(url, '.top_genre_movies_container');
+        await getTopMovies(url, '.genre_top_movies_container');
 
     } catch (error) {
         console.error("Erreur lors de la récupération des films:", error);

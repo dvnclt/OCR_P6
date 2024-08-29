@@ -70,3 +70,31 @@ export async function handleGenreSelection() {
     const event = new Event('change');
     categoriesMenu.dispatchEvent(event);
 }
+
+
+// Fonction pour vérifier et obtenir l'URL valide d'une image de film
+export async function getValidImageUrl(imageUrl, movieId) {
+    // Définition des images de fallback spécifiques aux films
+    const fallbackImages = {
+        259534: '../assets/images/ramayana_the_legend_of_prince_rama.jpg',
+        70696: '../assets/images/dvaergen.jpg',
+        75467: '../assets/images/az_otodik_pecset.jpg',
+        64116: '../assets/images/cera_una_volta_il_west.jpg',
+        59578: '../assets/images/per_qualche_dollaro_in_piu.jpg',
+    };
+
+    try {
+        // Effectue une requête fetch pour vérifier si l'image existe
+        const response = await fetch(imageUrl);
+        // Si l'image existe (status 200), retourne l'URL de l'image d'origine
+        if (response.ok) {
+            return imageUrl;
+        } else {
+            // Si l'image n'existe pas (ex: 404), retourne l'URL de fallback spécifique au film
+            return fallbackImages[movieId];
+        }
+    } catch (error) {
+        // En cas d'erreur (ex: problème de réseau), retourne l'URL de fallback spécifique au film
+        return fallbackImages[movieId];
+    }
+}

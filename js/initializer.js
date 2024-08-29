@@ -14,10 +14,10 @@ export async function initializeApplication() {
     await getTopMovies(scoreUrlPage1, '.top_movies_container');
 
     //Récupère les six meilleurs films pour une catégorie 1 donnée
-    await getTopMovies(topActionMoviesURL, '.top_cat1_movies_container');
+    await getTopMovies(topActionMoviesURL, '.genre1_top_movies_container');
 
     //Récupère les six meilleurs films pour une catégorie 2 donnée
-    await getTopMovies(topBiographyMoviesURL, '.top_cat2_movies_container');
+    await getTopMovies(topBiographyMoviesURL, '.genre2_top_movies_container');
 
     //Récupère les six meilleurs films pour la catégorie sélectionnée
     await handleGenreSelection();

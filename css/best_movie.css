@@ -1,0 +1,57 @@
+
+
+.best_movie {
+    height: auto;
+    border: 6px solid #000000;
+
+    display: grid;
+    grid-template-columns: 25% 75%;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.best_movie img{
+    padding: 3% 5%;
+    height: auto;
+    width: 100%;
+}
+
+.best_movie_informations {
+    padding-left: 8%;
+}
+
+.best_movie_title {
+    font-family: 'Oswald';
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.best_movie_description {
+    padding: 3% 3% 7% 0;
+    font-family: 'Oswald';
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.best_movie_btn {
+    position: absolute;
+    bottom: 8%;
+    right: 3.5%;
+
+    height: 68px;
+    width: 166px;
+    
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #FA0B0B;
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
