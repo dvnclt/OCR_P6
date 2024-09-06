@@ -11,8 +11,11 @@ export async function getBestMovie(url) {
     // Appelle fetchAPI une seconde fois pour obtenir les détails du meilleur film
     const bestMovie = await fetchAPI(data.results[0].url);
 
+    // Utilise la fonction getValidImageUrl pour vérifier et obtenir l'URL valide de l'image
+    const validImageUrl = await getValidImageUrl(bestMovie.image_url, bestMovie.id);
+
     // Met à jour les éléments HTML avec les détails du meilleur film
-    document.querySelector(".best_movie img").src = bestMovie.image_url;
+    document.querySelector(".best_movie img").src = validImageUrl;
     document.querySelector(".best_movie .best_movie_title").textContent = bestMovie.original_title;
     document.querySelector(".best_movie .best_movie_description").textContent = bestMovie.description;
 

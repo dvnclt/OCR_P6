@@ -1,6 +1,6 @@
-import { initializeApplication } from "./initializer.js";
+import { initializeApp } from "./initializer.js";
 
 
 document.addEventListener("DOMContentLoaded", async function() {
-    initializeApplication();
+    initializeApp();
 });

@@ -36,30 +36,46 @@
         <section>
             <h2>Films les mieux notés</h2>
             <div class="top_movies_container"></div>
+            <button id="show-more-btn-genre0">Voir plus</button>
         </section>
         <section>
             <h2>Action</h2>
             <div class="genre1_top_movies_container"></div>
+            <button id="show-more-btn-genre1">Voir plus</button>
         </section>
         <section>
             <h2>Biography</h2>
             <div class="genre2_top_movies_container"></div>
+            <button id="show-more-btn-genre2">Voir plus</button>
         </section>
         <section>
-            <h2>Autre : </h2>
-            <div><select id="categories" name="categories"></select></div>
+            <div class="dropdown-title">
+                <h2>Autre : </h2>
+                <div class="dropdown">
+                    <div class="genre-selected"></div>
+                    <div class="genre-items dropdown-hide"></div>
+                </div>
+            </div>
             <div class="genre_top_movies_container"></div>
+            <button id="show-more-btn-genreX">Voir plus</button>
         </section>
     </main>
     <footer>
     </footer>
-        <!-- HTML pour la fenêtre modale -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-            <!-- Tu peux ajouter ici plus de détails sur le film -->
+            <h3 id="modal-title"></h3>
+            <img id="modal-img" src="">
+            <p id="modal-year-genres"></p>
+            <p id="modal-duration-countries"></p>
+            <p id="modal-imdb_score"></p>
+            <p id="modal-directors-text">Réalisé par:</p>
+            <p id="modal-directors"></p>
+            <p id="modal-long_description"></p>
+            <p id="modal-actors-text">Avec:</p>
+            <p id="modal-actors"></p>
+            <button class="modal-close_button"> Fermer</button>
         </div>
     </div>
 </body>

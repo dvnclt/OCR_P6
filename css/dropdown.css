@@ -1,0 +1,94 @@
+/* Style pour le conteneur du titre et du dropdown */
+.dropdown-title {
+    display: flex;
+    align-items: center;
+}
+
+/* Style pour le titre */
+.dropdown-title h2 {
+    margin: 0; /* Supprime les marges par défaut du titre */
+    margin: 3% 1% 3% 0;/* Réduit l'espace entre le titre et le dropdown */
+
+}
+
+/* Style pour le dropdown */
+.dropdown {
+    position: relative;
+    width: 30%;
+    height: auto;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+/* Style pour l'élément sélectionné */
+.genre-selected {
+    padding: 10px;
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 3em;
+    color: #000000;
+    background-color: #fff;
+}
+
+/* Style pour le menu déroulant */
+.genre-items {
+    position: absolute;
+    width: 100%;
+    max-height: 500%;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #000000;
+    z-index: 1;
+    top: 100%; /* Positionne le menu déroulant juste en dessous de l'élément sélectionné */
+    left: -1px;
+}
+
+/* Masque le menu déroulant */
+.dropdown-hide {
+    display: none;
+}
+
+/* Style pour chaque élément du menu déroulant */
+.genre-items div {
+    position: relative;
+
+    padding: 10px;
+
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 3em;
+    color: #000000;
+    background-color: #fff;
+
+    border-bottom: 1px solid #000000;
+
+    cursor: pointer; /* Change le curseur en main pour indiquer que c'est cliquable */
+}
+
+/* Hover effect pour les éléments du menu déroulant */
+.genre-items div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style pour le dernier élément du menu déroulant */
+.genre-items div:last-child {
+    border-bottom: none;
+}
+
+/* Style pour le check symbol (initialement caché) */
+.genre-items div .check-symbol {
+    position: absolute;
+    top: 52%;
+    right: 7%;
+    transform: translateY(-50%); /* Centre verticalement le symbole */
+
+    font-size: 0.6em;
+
+    visibility: hidden;
+}
+
+/* Style pour l'élément sélectionné */
+.genre-items div.selected .check-symbol {
+    visibility: visible; /* Affiche le symbole quand l'option est sélectionnée */
+}
+

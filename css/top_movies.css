@@ -43,11 +43,14 @@
     opacity: 1;
 }
 
-.container .movie_title {
-    margin: 10% 0 0 7%;
+.movie_title {
+    margin-top: 7%;
+    margin-left: 7%;
 
     font-family: 'Oswald', sans-serif;
     font-size: 2em;
+
+    white-space: nowrap;
 }
 
 .overlay_btn_details {
@@ -66,4 +69,26 @@
     cursor: pointer;
 
     transition: background-color 0.3s ease;
+}
+
+#show-more-btn-genre0,
+#show-more-btn-genre1,
+#show-more-btn-genre2,
+#show-more-btn-genreX {
+    display: none;
+
+    margin-top: 2%;
+    margin-left: 40%;
+    padding: 5px 0 5px 0;
+
+    border: none;
+    border-radius: 30px;
+    width: 18%;
+
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    background-color: red;
+
+    cursor: pointer;
 }

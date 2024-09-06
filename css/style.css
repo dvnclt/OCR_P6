@@ -1,7 +1,9 @@
 @import 'header.css';
 @import 'best_movie.css';
 @import 'top_movies.css';
+@import 'dropdown.css';
 @import 'modal.css';
+@import 'responsive.css';
 
 * {
     margin: 0px;
@@ -40,4 +42,8 @@ h2 {
     font-weight: 500;
     font-size: 4em;
     color: #000000;
+}
+
+footer {
+    height: 10%;
 }
